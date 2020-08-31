@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Journal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+</head>
+
+<body class="text-center">
+
+    <div id="container">
+        
+        
+        <div id="main">
+            
+            <div class="navbar fixed-top navbar-light navbar-expand-sm navbar-template">
+                <a class="navbar-brand" href="#">Weather App</a>
+                <div class="d-flex flex-row order-2 order-sm-3">
+                    <ul class="navbar-nav flex-row">
+                        <li class="nav-item"><a class="nav-link px-2" href="#"><i class="fab fa-facebook"></i></a></li>
+                        <li class="nav-item"><a class="nav-link px-2" href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="nav-item"><a class="nav-link px-2" href="#"><i class="fab fa-youtube"></i></a></li>
+                        <li class="nav-item"><a class="nav-link px-2" href="#"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                </div>
+                
+                <div class="collapse navbar-collapse order-3 order-sm-2" id="navbarNavDropdown">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                <!-- Fetching Form -->
+                <form class="form">
+                    <input type="text" id="zip" class="fadeIn second" name="ZIP" placeholder="Enter ZIP Code Here" required>
+                    <input type="text" id="feeling" class="fadeIn third" name="feeling" placeholder="How Do You Feel Today?" required>
+                    <input type="button" id="generate-button" class="fadeIn fourth" value="Generate">
+                </form>
+          
+                <!-- Most Recent Entry -->
+                <div id="formFooter">
+                    <a class="underlineHover">Most Recent Entry</a>
+                </div>
+                <div class="updateUi">
+
+                    <div id="date"></div>
+                    <div id="temp"></div>
+                    <div id="content"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+        
+        
+        
+        
+        
+        
+        
