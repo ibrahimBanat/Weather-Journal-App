@@ -18,36 +18,34 @@ app.use(cors());
 // Initialize the main project folder
 app.use(express.static('website'));
 
-
 // Setup Server
 
-const port = 8000;
+const port = env.process.PORT || 8000;
 
 const server = app.listen(port, listening);
 
 function listening() {
-    console.log('server is running..')
-    console.log(`server running on port: ${port}`)
+  console.log('server is running..');
+  console.log(`server running on port: ${port}`);
 }
 
 //Get function
 app.get('/all', sendData);
 
 function sendData(req, res) {
-    res.send(projectData);
-    projectData = [];
+  res.send(projectData);
+  projectData = [];
 }
 
-//post route  
+//post route
 app.post('/add', addData);
 
-function addData (req, res) {
-    console.log(req.body);
-    newEntry = {
-        date: req.body.date,
-        temp: req.body.temp,
-        content: req.body.content
-    }
-    projectData.push(newEntry);
-
+function addData(req, res) {
+  console.log(req.body);
+  newEntry = {
+    date: req.body.date,
+    temp: req.body.temp,
+    content: req.body.content,
+  };
+  projectData.push(newEntry);
 }
